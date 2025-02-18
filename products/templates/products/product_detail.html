@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ product.product_description_short }}</h2>
+<p>Price: R$ {{ product.product_unit_price }}</p>
+<p>Stock: {{ product.product_stock }}</p>
+<p>Category: {{ product.product_category }}</p>
+<a href="{% url 'product_list' %}">Back</a>
+<a href="{% url 'product_update' product.pk %}">Edit</a>
+<a href="{% url 'product_delete' product.pk %}">Delete</a>
+{% endblock %}
